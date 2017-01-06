@@ -47,12 +47,10 @@ public class MainApp {
 		InitByXmlBeanExample initByXmlBean = (InitByXmlBeanExample) context.getBean("initByXmlBeanExample");
 		initByXmlBean.setMessage("initByXmlBean");
 		initByXmlBean.getMessage();
+
 		
 		
 		System.out.println();
 		System.out.println("====== END MAIN ======");
-		
-		
-
 	}
 }

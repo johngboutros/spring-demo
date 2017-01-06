@@ -23,4 +23,7 @@
 	<bean id="initByXmlBeanExample" class="com.johngboutros.InitByXmlBeanExample"
 		init-method="init" destroy-method="destroy">
 	</bean>
+
+	<bean class="com.johngboutros.BeanPostProcessorExample"></bean>
+	
 </beans>
