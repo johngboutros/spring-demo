@@ -16,7 +16,7 @@ public class MainApp {
 		HelloWorld healloWorld = (HelloWorld) context.getBean("helloWorld");
 		healloWorld.getMessage();
 		
-		// SINGLETON BEAN
+		// BEAN SCOPES: SINGLETON BEAN
 		System.out.println();
 		System.out.println("====== BEAN SCOPES: SINGLETON BEAN ======");
 		SingletonBean singletonBeanA = (SingletonBean) context.getBean("singletonBean");
@@ -25,7 +25,7 @@ public class MainApp {
 		SingletonBean singletonBeanB = (SingletonBean) context.getBean("singletonBean");
 		singletonBeanB.getMessage();
 		
-		// PROTOTYPE BEAN
+		// BEAN SCOPES: PROTOTYPE BEAN
 		System.out.println();
 		System.out.println("====== BEAN SCOPES: PROTOTYPE BEAN ======");
 		PrototypeBean prototypeBeanA = (PrototypeBean) context.getBean("prototypeBean");
@@ -34,21 +34,30 @@ public class MainApp {
 		PrototypeBean prototypeBeanB = (PrototypeBean) context.getBean("prototypeBean");
 		prototypeBeanB.getMessage();
 		
-		// InitializingBean, DisposableBean
+		// BEAN LIFECYCLE: Implementing InitializingBean, DisposableBean
 		System.out.println();
 		System.out.println("====== BEAN LIFECYCLE: Implementing InitializingBean, DisposableBean ======");
 		InitializingBeanExample initializingBean = (InitializingBeanExample) context.getBean("initializingBeanExample");
 		initializingBean.setMessage("initializingBean");
 		initializingBean.getMessage();
 		
-		// InitByXmlBeanExample
+		// BEAN LIFECYCLE: Init & Destroy By Xml
 		System.out.println();
 		System.out.println("====== BEAN LIFECYCLE: Init & Destroy By Xml ======");
 		InitByXmlBeanExample initByXmlBean = (InitByXmlBeanExample) context.getBean("initByXmlBeanExample");
 		initByXmlBean.setMessage("initByXmlBean");
 		initByXmlBean.getMessage();
 
-		
+		// Bean Definition Inheritance
+		System.out.println();
+		System.out.println("====== Bean Definition Inheritance ======");
+		HelloWorldParent helloWorldParent = (HelloWorldParent) context.getBean("helloWorldParent");
+		helloWorldParent.getMessage1();
+		helloWorldParent.getMessage2();
+		HelloIndia helloIndia = (HelloIndia) context.getBean("helloIndia");
+		helloIndia.getMessage1();
+		helloIndia.getMessage2();
+		helloIndia.getMessage3();
 		
 		System.out.println();
 		System.out.println("====== END MAIN ======");
