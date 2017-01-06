@@ -17,4 +17,10 @@
 		scope="prototype">
 	</bean>
 
+	<bean id="initializingBeanExample" class="com.johngboutros.InitializingBeanExample">
+	</bean>
+
+	<bean id="initByXmlBeanExample" class="com.johngboutros.InitByXmlBeanExample"
+		init-method="init" destroy-method="destroy">
+	</bean>
 </beans>
