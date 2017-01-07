@@ -59,6 +59,14 @@ public class MainApp {
 		helloIndia.getMessage2();
 		helloIndia.getMessage3();
 		
+		// Spring Dependency Injection
+		System.out.println();
+		System.out.println("====== Spring Dependency Injection ======");
+		TextEditor te = (TextEditor) context.getBean("textEditor");
+		te.spellCheck();
+		te.print();
+		te.formatFont();
+
 		System.out.println();
 		System.out.println("====== END MAIN ======");
 	}

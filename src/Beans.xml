@@ -47,4 +47,21 @@
 		<property name="message3" value="Namaste India!" />
 	</bean>
 
+	<!-- Spring Dependency Injection -->
+	<!-- Definition for textEditor bean -->
+	<bean id="textEditor" class="com.johngboutros.TextEditor">
+		<constructor-arg ref="spellChecker" />
+		<constructor-arg index="1" type="int" value="2001" />
+		<constructor-arg type="java.lang.String" value="Zara" />
+		<property name="fontFormatter" ref="fontFormatter"/>
+	</bean>
+
+	<!-- Definition for spellChecker bean -->
+	<bean id="spellChecker" class="com.johngboutros.SpellChecker">
+	</bean>
+
+	<!-- Definition for FontFormatter bean -->
+	<bean id="fontFormatter" class="com.johngboutros.FontFormatter">
+	</bean>
+
 </beans>
